@@ -13,10 +13,13 @@ html[data-theme="light"] {
     color: $text-color-light;
   }
   & header {
-    &#nav {
-      & i[data-theme-toggler] {
-        color: $text-color-light;
-        // cursor: pointer;
+    background: $bg-color-light;
+    & nav {
+      & #nav {
+        & i[data-theme-toggler] {
+          color: $text-color-light;
+          // cursor: pointer;
+        }
       }
     }
   }
@@ -29,17 +32,16 @@ html[data-theme="dark"] {
     color: $text-color-dark;
   }
   & header {
-    &#nav {
-      & i[data-theme-toggler] {
-        color: $text-color-dark;
-        // cursor: pointer;
+    background: $bg-color-dark;
+    & nav {
+      &#nav {
+        & i[data-theme-toggler] {
+          color: $text-color-dark;
+          // cursor: pointer;
+        }
       }
     }
   }
-}
-
-main {
-  max-width: 1024px;
 }
 
 img {
@@ -67,6 +69,32 @@ a:hover {
 }
 a:hover:after {
   transform: scaleX(1);
+}
+
+main {
+  max-width: 1024px;
+  & section#hero-header {
+    background: url(../images/Background_with_octogone_.png) no-repeat center
+      center / cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & #content {
+      display: flex;
+      width: 80%;
+      max-width: 800px;
+      & div {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+  & section:nth-child(1) {
+    min-height: 100vh;
+  }
+  & section:not(:nth-child(1)) {
+    height: 100px;
+  }
 }
 
 @media only screen and (max-width: 768px) {
