@@ -1,0 +1,311 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html[data-theme=light] {
+  background-color: #ececec;
+  color: #212121;
+}
+html[data-theme=light] a {
+  color: #212121;
+}
+html[data-theme=light] header#nav i[data-theme-toggler] {
+  color: #212121;
+}
+
+html[data-theme=dark] {
+  background-color: #212121;
+  color: #ececec;
+}
+html[data-theme=dark] a {
+  color: #ececec;
+}
+html[data-theme=dark] header#nav i[data-theme-toggler] {
+  color: #ececec;
+}
+
+main {
+  max-width: 1024px;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: rgb(255, 255, 255);
+  position: relative;
+  text-decoration: none;
+}
+
+a:after {
+  content: "";
+  position: absolute;
+  transform: scaleX(0);
+  width: 100%;
+  height: 2px;
+  background-color: currentColor;
+  transition: transform 0.25s ease-out;
+  bottom: 0;
+  left: 0;
+}
+
+a:hover {
+  color: blue !important;
+}
+
+a:hover:after {
+  transform: scaleX(1);
+}
+
+@media only screen and (max-width: 768px) {
+  html[data-theme=light] header nav #nav {
+    background-color: #212121;
+  }
+  html[data-theme=light] header nav #nav ul li {
+    color: #ececec;
+  }
+  html[data-theme=light] header nav #nav ul li a {
+    color: #ececec;
+  }
+  html[data-theme=light] header nav #nav i[data-theme-toggler] {
+    color: #ececec;
+  }
+  html[data-theme=dark] header nav #nav {
+    background-color: #ececec;
+  }
+  html[data-theme=dark] header nav #nav ul li {
+    color: #212121;
+  }
+  html[data-theme=dark] header nav #nav ul li a {
+    color: #212121;
+  }
+  html[data-theme=dark] header nav #nav i[data-theme-toggler] {
+    color: #212121;
+  }
+}
+header {
+  position: fixed;
+  width: 100%;
+}
+header nav {
+  max-width: 1280px;
+  margin: 8px auto;
+  display: flex;
+  justify-content: space-between;
+}
+header nav #toggle-nav {
+  display: none;
+}
+header nav #nav {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-around;
+}
+header nav #nav ul {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-around;
+}
+header nav #nav ul li i {
+  display: none;
+}
+
+@media only screen and (max-width: 1280px) {
+  header nav {
+    margin: 8px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  header nav #toggle-nav {
+    display: inline;
+  }
+  header nav #nav {
+    background: rgb(130, 130, 159);
+    display: flex;
+    flex-direction: column;
+    transform: translate(100vw, -50%);
+    transition: transform 1s;
+    width: 50vw;
+    min-height: 50vh;
+    padding: 8px;
+    height: 80%;
+    position: fixed;
+    right: 10px;
+    top: 50%;
+    max-width: 200px;
+    border-radius: 8px 0 0 8px;
+  }
+  header nav #nav ul {
+    width: -moz-fit-content;
+    width: fit-content;
+    flex-direction: column;
+  }
+  header nav #nav ul li {
+    display: flex;
+    align-items: center;
+  }
+  header nav #nav ul li i {
+    display: block;
+    margin-right: 1rem;
+    font-size: 16px;
+  }
+  header nav #nav ul li a {
+    padding: 8px 0;
+  }
+  header nav #nav i[data-theme-toggler] {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+  }
+  header nav #nav.mobile {
+    transform: translate(0, -50%);
+  }
+  header nav i#toggle-nav {
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 576px) {
+  header nav #nav {
+    display: flex;
+  }
+}/*# sourceMappingURL=style.css.map */
