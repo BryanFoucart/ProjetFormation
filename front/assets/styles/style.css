@@ -199,12 +199,37 @@ a:hover:after {
   transform: scaleX(1);
 }
 
+button {
+  padding: 8px;
+  border-radius: 8px;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: cell;
+}
+
+button:hover {
+  font-style: italic;
+}
+
+button.info {
+  border: white;
+  color: white;
+  background: blue;
+}
+
+button.info:hover {
+  background: white;
+  color: blue;
+  border: blue;
+}
+
 main {
   max-width: 1024px;
 }
 main section#hero-header {
   background: url(../images/Background_with_octogone_.png) no-repeat center center/cover;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -213,9 +238,18 @@ main section#hero-header #content {
   width: 80%;
   max-width: 800px;
 }
+main section#hero-header #content #p-left {
+  padding: 8px;
+}
 main section#hero-header #content div {
   display: flex;
   flex-direction: column;
+}
+main section#hero-header #content div p {
+  padding: 0 0 8px 8px;
+}
+main section#hero-header #content button {
+  margin-left: auto;
 }
 main section:nth-child(1) {
   min-height: 100vh;
@@ -224,6 +258,14 @@ main section:not(:nth-child(1)) {
   height: 100px;
 }
 
+@media only screen and (max-width: 768px) {
+  main section#hero-header #content {
+    width: 50%;
+  }
+  main section#hero-header #content #p-left {
+    display: none;
+  }
+}
 @media only screen and (max-width: 768px) {
   html[data-theme=light] header nav #nav {
     background-color: #212121;

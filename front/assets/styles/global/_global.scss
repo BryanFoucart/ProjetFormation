@@ -71,21 +71,55 @@ a:hover:after {
   transform: scaleX(1);
 }
 
+button {
+  padding: 8px;
+  border-radius: 8px;
+  width: fit-content;
+  cursor: cell;
+}
+
+button:hover {
+  font-style: italic;
+}
+
+button.info {
+  border: white;
+  color: white;
+  background: blue;
+}
+
+button.info:hover {
+  background: white;
+  color: blue;
+  border: blue;
+}
+
 main {
   max-width: 1024px;
   & section#hero-header {
     background: url(../images/Background_with_octogone_.png) no-repeat center
       center / cover;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     & #content {
       display: flex;
       width: 80%;
       max-width: 800px;
+      & #p-left {
+        padding: 8px;
+      }
       & div {
         display: flex;
         flex-direction: column;
+
+        & p {
+          padding: 0 0 8px 8px;
+        }
+      }
+      & button {
+        margin-left: auto;
       }
     }
   }
@@ -97,6 +131,20 @@ main {
   }
 }
 
+@media only screen and (max-width: 768px) {
+  main {
+    & section#hero-header {
+      & #content {
+        width: 50%;
+        & #p-left {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+//Darkmode
 @media only screen and (max-width: 768px) {
   html[data-theme="light"] {
     & header {
