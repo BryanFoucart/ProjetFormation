@@ -1,12 +1,21 @@
 header {
   position: fixed;
   width: 100%;
+  z-index: 1000;
 
   & nav {
     max-width: 1280px;
     margin: 8px auto;
     display: flex;
     justify-content: space-between;
+    & #logo {
+      & a {
+        & i {
+          font-size: 1.5rem;
+          cursor: cell;
+        }
+      }
+    }
     & #toggle-nav {
       display: none;
     }
@@ -55,6 +64,7 @@ header {
         transition: transform 1s;
         width: 50vw;
         min-height: 50vh;
+        min-height: calc(var(--vh, 1vh) * 50);
         padding: 8px;
         height: 80%;
         position: fixed;
