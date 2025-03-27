@@ -64,9 +64,9 @@ header {
         transition: transform 1s;
         width: 50vw;
         min-height: 50vh;
-        min-height: calc(var(--vh, 1vh) * 50);
+        min-height: calc(var(--vh, 1) * 50);
         padding: 8px;
-        height: 80%;
+        height: 70%;
         position: fixed;
         right: 10px;
         top: 50%;

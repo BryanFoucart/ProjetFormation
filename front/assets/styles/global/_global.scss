@@ -142,6 +142,8 @@ button.info:hover {
 
 main {
   max-width: 1024px;
+  margin: auto;
+  // position: relative;
   & section#hero-header {
     color: $text-color-light;
     background: url(../images/Background_with_octogone_.png) no-repeat center
@@ -206,6 +208,12 @@ main {
         }
       }
     }
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  #scroll-to-top {
+    bottom: 2.5rem;
   }
 }
 
