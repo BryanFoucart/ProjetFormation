@@ -132,6 +132,7 @@ button.info:hover {
 
 #scroll-to-top {
   display: none;
+  // mix-blend-mode: exclusion; || Permet de changer la couleur de l'élément selon ce qu'il y a en dessous
   position: fixed;
   right: 1rem;
   bottom: 1rem;
@@ -146,7 +147,7 @@ main {
   // position: relative;
   & section#hero-header {
     color: $text-color-light;
-    background: url(../images/Background_with_octogone_.png) no-repeat center
+    background: url("/images/Background_with_octogone_.png") no-repeat center
       center / cover;
     display: flex;
     flex-direction: column;
