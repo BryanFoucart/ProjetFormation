@@ -50,6 +50,13 @@ html[data-theme="light"] {
   & header {
     background: $bg-color-light;
     & nav {
+      & #logo {
+        & a:hover {
+          & i {
+            color: blue;
+          }
+        }
+      }
       & #nav {
         & i[data-theme-toggler] {
           color: $text-color-light;
@@ -70,6 +77,13 @@ html[data-theme="dark"] {
   & header {
     background: $bg-color-dark;
     & nav {
+      & #logo {
+        & a:hover {
+          & i {
+            color: red;
+          }
+        }
+      }
       &#nav {
         & i[data-theme-toggler] {
           color: $text-color-dark;
@@ -226,6 +240,7 @@ main {
       & nav {
         & #nav {
           background-color: $bg-color-dark;
+
           & ul {
             & li {
               color: $text-color-dark;

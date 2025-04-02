@@ -1,35 +1,44 @@
-<footer style="height: 5vh;">
-  <div id="reseaux">
-    <a href="javascript:void(0);" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href) + '&t=' + document.title, '_blank', 'width=600,height=400'); return false;">
-      <i id="facebook" class="fab fa-facebook-square"></i>
-    </a>
-
-    <a href="javascript:void(0);" onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(window.location.href) + '&title=' + document.title, '_blank', 'width=600,height=400'); return false;">
-      <i id="linkedin" class="fab fa-linkedin"></i>
-    </a>
-    <a href="javascript:void(0);" onclick="window.open('https://twitter.com/intent/tweet?url=' + encodeURIComponent(window.location.href) + '&text=' + document.title, '_blank', 'width=600,height=400'); return false;">
-      <i id="twitter" class="fa-brands fa-square-x-twitter"></i>
-    </a>
-
-    <a href="javascript:void(0);" onclick="window.open('https://www.instagram.com/?url=' + encodeURIComponent(window.location.href), '_blank', 'width=600,height=400'); return false;">
-      <i id="instagram" class="fab fa-instagram-square"></i>
-    </a>
+<div id="reseaux">
+  <div onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href) + '&t=' + document.title, '_blank', 'width=600,height=400'); return false;">
+    <i id="facebook" class="fab fa-facebook-square"></i>
   </div>
-  <div id="reseaux-mobile">
-    <a href="javascript:void(0);" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href) + '&t=' + document.title, '_blank', 'width=600,height=400'); return false;">
-      <i id="facebook" class="fab fa-facebook-square"></i>
-    </a>
 
-    <a href="javascript:void(0);" onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(window.location.href) + '&title=' + document.title, '_blank', 'width=600,height=400'); return false;">
-      <i id="linkedin" class="fab fa-linkedin"></i>
-    </a>
-    <a href="javascript:void(0);" onclick="window.open('https://twitter.com/intent/tweet?url=' + encodeURIComponent(window.location.href) + '&text=' + document.title, '_blank', 'width=600,height=400'); return false;">
-      <i id="twitter" class="fa-brands fa-square-x-twitter"></i>
-    </a>
-
-    <a href="javascript:void(0);" onclick="window.open('https://www.instagram.com/?url=' + encodeURIComponent(window.location.href), '_blank', 'width=600,height=400'); return false;">
-      <i id="instagram" class="fab fa-instagram-square"></i>
-    </a>
+  <div onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(window.location.href) + '&title=' + document.title, '_blank', 'width=600,height=400'); return false;">
+    <i id="linkedin" class="fab fa-linkedin"></i>
   </div>
-  <i id="scroll-to-top" class="fas fa-caret-up"></i>
+  <div onclick="window.open('https: //twitter.com/intent/tweet?url=' + encodeURIComponent(window.location.href) + ' &text=' + document.title, ' _blank', 'width=600,height=400' ); return false;">
+    <i id="twitter" class="fa-brands fa-square-x-twitter"></i>
+  </div>
+
+  <div onclick="window.open('https://www.instagram.com/?url=' + encodeURIComponent(window.location.href), '_blank', 'width=600,height=400'); return false;">
+    <i id="instagram" class="fab fa-instagram-square"></i>
+  </div>
+</div>
+<div id="reseaux-mobile">
+  <div onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href) + '&t=' + document.title, '_blank', 'width=600,height=400'); return false;">
+    <i id="facebook" class="fab fa-facebook-square"></i>
+  </div>
+
+  <div onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(window.location.href) + '&title=' + document.title, '_blank', 'width=600,height=400'); return false;">
+    <i id="linkedin" class="fab fa-linkedin"></i>
+  </div>
+  <div onclick="window.open('https://twitter.com/intent/tweet?url=' + encodeURIComponent(window.location.href) + '&text=' + document.title, '_blank', 'width=600,height=400'); return false;">
+    <i id="twitter" class="fa-brands fa-square-x-twitter"></i>
+  </div>
+
+  <div onclick="window.open('https://www.instagram.com/?url=' + encodeURIComponent(window.location.href), '_blank', 'width=600,height=400'); return false;">
+    <i id="instagram" class="fab fa-instagram-square"></i>
+  </div>
+</div>
+<i id="scroll-to-top" class="fas fa-caret-up"></i>
+
+<footer style="text-align: center;">
+  <i class="fas fa-copyright"></i> <span class="year"></span> by <a href="<%= process.env.SITE_URL %>">My Crypto</a>
+  <script>
+    const footerYear = document.querySelectorAll(".year");
+    footerYear.forEach(copyright => {
+      copyright.textContent = new Date().getFullYear();
+    });
+  </script>
+  <div style="height: 10vh;"></div>
 </footer>

@@ -10,9 +10,7 @@
   bottom: 1rem;
 
   gap: 5px;
-  & a {
-    text-decoration: none;
-
+  & div {
     & i {
       cursor: cell;
       font-size: 1.5rem;
@@ -37,9 +35,7 @@
     background-color: rgba(255, 255, 255, 0.158);
     bottom: 0;
     gap: 5px;
-    & a {
-      text-decoration: none;
-
+    & div {
       & i {
         cursor: cell;
         font-size: 2rem;
