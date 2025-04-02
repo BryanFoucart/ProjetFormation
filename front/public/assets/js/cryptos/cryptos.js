@@ -19,7 +19,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
 function create(loading, tabGames) {
   if (!loading) {
-    console.log(tabGames);
+    // console.log(tabGames);
     const cryptos = document.querySelector("#cryptos");
     const container = document.createElement("div");
     container.setAttribute("id", "content-games");

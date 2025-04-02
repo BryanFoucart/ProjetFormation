@@ -89,7 +89,7 @@ a {
   position: relative;
   text-decoration: none;
 }
-a:not(#logo a):after {
+a:not(#logo a, #reseaux a, #reseaux-mobile a):after {
   content: "";
   position: absolute;
   transform: scaleX(0);
@@ -100,10 +100,11 @@ a:not(#logo a):after {
   bottom: 0;
   left: 0;
 }
-a:not(#logo a):hover {
-  color: blue !important;
-}
-a:not(#logo a):hover:after {
+// a:not(#logo a, #reseaux a, #reseaux-mobile a):hover {
+//   // color: blue !important; pour rendre les liens surlignés bleus
+
+// }
+a:not(#logo a, #reseaux a, #reseaux-mobile a):hover:after {
   transform: scaleX(1);
 }
 
@@ -231,6 +232,9 @@ main {
               & a {
                 color: $bg-color-light;
               }
+              & a:hover {
+                font-size: larger;
+              }
             }
           }
           & i[data-theme-toggler] {
@@ -252,6 +256,9 @@ main {
               color: $text-color-light;
               & a {
                 color: $bg-color-dark;
+              }
+              & a:hover {
+                font-size: larger;
               }
             }
           }
