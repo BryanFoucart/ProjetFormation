@@ -1,0 +1,33 @@
+<head>
+  <link rel="stylesheet" href="<%= process.env.SITE_URL %>/assets/styles/galerie.css">
+  <script type="module" src="<%= process.env.SITE_URL %>/assets/js/lightbox_galerie/lightbox_galerie.js"></script>
+  <link rel="stylesheet" href="<%= process.env.SITE_URL %>/assets/styles/carrousel/_carrousel.css">
+  </body>
+
+</head>
+
+<%- include("../partials/header", {title:"Galerie"}) %>
+
+<main>
+  <section class="galerie-section">
+
+    <!-- <h1>Galerie</h1> -->
+    <ul class="galerie-grid">
+      <!-- js natif -->
+      <% images.forEach((image) => { %>
+      <!-- fin js natif -->
+      <!-- html natif -->
+      <li class="galerie-item">
+        <img src="<%= image.urls.regular %>" alt="<%= image.alt_description %>" />
+      </li>
+      <!-- fin html natif -->
+      <% }) %>
+    </ul>
+    <div id="lightbox">
+      <i class="fas fa-x close"></i>
+      <img src="" alt="" class="lightbox-content" id="lightbox-img" />
+    </div>
+  </section>
+</main>
+
+<%- include("../partials/footer") %>

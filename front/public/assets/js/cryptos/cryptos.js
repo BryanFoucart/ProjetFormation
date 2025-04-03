@@ -4,8 +4,14 @@ window.addEventListener("DOMContentLoaded", () => {
   let loading = true;
   let tabGames = [];
   fetchData({
-    route:
-      "/games?key=db76511d21a143668bd090896650561f&dates=2019-09-01,2019-09-30&platforms=18,1,7",
+    route: "/games",
+    options: {
+      params: {
+        key: "e46bab18047e466aaf70d23b4193671f",
+        dates: "2019-09-01,2019-09-30",
+        platforms: "18,1,7",
+      },
+    },
   })
     .then((data) => {
       return data.results;
