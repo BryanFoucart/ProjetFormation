@@ -73,8 +73,7 @@ section.galerie-section {
 }
 
 #lightbox-img.zoomed {
-  transform: scale(1.5); // Applique un zoom à 150%
-  cursor: zoom-out; // Modifie le curseur pour montrer que l'on peut dézoomer
+  cursor: unset;
 }
 
 #lightbox .close {
