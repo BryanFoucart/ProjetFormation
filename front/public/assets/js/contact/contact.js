@@ -1,4 +1,4 @@
-console.log("first");
+import { fetchData } from "../lib/functions.js";
 
 // Champs de texte
 const form = document.querySelector("#form-contact");
@@ -99,4 +99,69 @@ messageInput.addEventListener("blur", () => {
     errorMessage,
     "Le message doit comporter au moins 10 caractères."
   );
+});
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault(); // Empêche le rechargement de la page
+
+  // Validation finale avant envoi
+  const isNameValid = validateField(
+    nameInput,
+    nameRegex,
+    errorName,
+    "Veuillez entrer un nom valide (minimum 2 caractères, lettres et espaces uniquement)."
+  );
+  const isEmailValid = validateField(
+    emailInput,
+    emailRegex,
+    errorEmail,
+    "Veuillez entrer une adresse email valide."
+  );
+  const isSubjectValid = validateLength(
+    subjectInput,
+    3,
+    errorSubject,
+    "Le sujet doit comporter au moins 3 caractères."
+  );
+  const isMessageValid = validateLength(
+    messageInput,
+    10,
+    errorMessage,
+    "Le message doit comporter au moins 10 caractères."
+  );
+  if (!isEmailValid || !isNameValid || !isSubjectValid || !isMessageValid)
+    return;
+
+  const formData = {
+    name: nameInput.value.trim(),
+    email: emailInput.value.trim(),
+    subject: subjectInput.value.trim(),
+    message: messageInput.value.trim(),
+  };
+
+  console.log("FormData : ", formData);
+
+  // envoi du message ...
+  try {
+    const result = await fetchData({
+      route: "/contact",
+      api: "",
+      options: {
+        method: "POST", // obligatoire si c'est pas du get
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      },
+    });
+
+    responseMessage.innerHTML = `<div class="alert success">${result.message}</div>`;
+    form.reset();
+    document
+      .querySelectorAll(".validation-icon")
+      .forEach((icon) => (icon.className = "validation-icon"));
+  } catch (error) {
+    responseMessage.innerHTML = `<div class="alert error">Une erreur est survenue lors de l'envoie du formulaire</div>`;
+    console.log(error);
+  }
 });

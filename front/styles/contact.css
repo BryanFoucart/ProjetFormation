@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Appliquer box-sizing pour une gestion correcte des dimensions */
 *,
 *::before,
@@ -101,25 +102,12 @@ textarea.valid ~ .validation-icon {
   text-align: center;
 }
 
-.success {
+.alert.success {
   background-color: #2ecc71;
   color: #fff;
 }
 
-.error {
+.alert.error {
   background-color: #e74c3c;
   color: #fff;
-}
-
-// Button
-button.submit {
-  margin: auto;
-  width: 25%;
-}
-
-button.submit:hover {
-  color: white;
-  background-color: blue;
-  font-style: normal;
-  font-weight: bold;
-}
+}/*# sourceMappingURL=contact.css.map */

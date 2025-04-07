@@ -124,9 +124,16 @@ a:not(#logo a, #reseaux a, #reseaux-mobile a):after {
 //   // color: blue !important; pour rendre les liens surlignés bleus
 
 // }
-a:not(#logo a, #reseaux a, #reseaux-mobile a):hover:after {
+a:not(#logo a, #reseaux a, #reseaux-mobile a):hover:after,
+a.active:not(#logo a):not(#reseaux-mobile a):not(#reseaux a):after {
   transform: scaleX(1);
+  bottom: -2px;
 }
+
+// a:active:not(#logo a):not(#reseaux-mobile a):not(#reseaux a):after {
+//   transform: scaleX(1);
+//   bottom: -2px;
+// }
 
 button {
   padding: 8px;

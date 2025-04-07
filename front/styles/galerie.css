@@ -1,59 +1,54 @@
 main {
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
-  // min-height: 100vh;
-  // min-height: calc(var(--vh, 1vh) * 100);
   padding: 4rem 0;
 }
 
-// Conteneur de la galerie en mode masonry
 section.galerie-section {
   max-width: calc(100vw - 125px);
   margin: auto;
-  & ul.galerie-grid {
-    padding: 0;
-    column-count: 1;
-    column-gap: 10px;
-    & li.galerie-item {
-      margin-bottom: 10px;
-      break-inside: avoid; // facultatif pour images, utile pour texte sous column-count
-
-      & img {
-        display: block;
-        width: 100%;
-        height: auto;
-        border-radius: 15px;
-      }
-    }
-  }
+}
+section.galerie-section ul.galerie-grid {
+  padding: 0;
+  -moz-column-count: 1;
+       column-count: 1;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+section.galerie-section ul.galerie-grid li.galerie-item {
+  margin-bottom: 10px;
+  -moz-column-break-inside: avoid;
+       break-inside: avoid;
+}
+section.galerie-section ul.galerie-grid li.galerie-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
 }
 
 @media only screen and (min-width: 576px) {
   section.galerie-section {
     width: 90%;
-    ul.galerie-grid {
-      column-count: 2;
-    }
+  }
+  section.galerie-section ul.galerie-grid {
+    -moz-column-count: 2;
+         column-count: 2;
   }
 }
-
 @media only screen and (min-width: 768px) {
   ul.galerie-grid {
-    column-count: 3;
+    -moz-column-count: 3;
+         column-count: 3;
   }
 }
-
 @media only screen and (min-width: 1024px) {
   section.galerie-section {
     width: 90%;
-    ul.galerie-grid {
-      column-count: 4;
-    }
+  }
+  section.galerie-section ul.galerie-grid {
+    -moz-column-count: 4;
+         column-count: 4;
   }
 }
-
-// Lightbox
 #lightbox {
   display: none;
   position: fixed;
@@ -65,14 +60,11 @@ section.galerie-section {
   justify-content: center;
   align-items: center;
   background: rgba(0, 0, 0, 0.747);
-  & i {
-    z-index: 1001;
-  }
 }
 
 #lightbox-img {
   max-height: 100vh;
-  transition: transform 0.3s ease-in-out; // Animation douce pour le zoom
+  transition: transform 0.3s ease-in-out;
 }
 
 #lightbox-img.zoomed {
@@ -95,9 +87,10 @@ section.galerie-section {
   text-decoration: none;
   cursor: cell;
 }
+
 /* Ajustements responsive */
 @media (max-width: 768px) {
   #lightbox-img {
     width: 90%;
   }
-}
+}/*# sourceMappingURL=galerie.css.map */
