@@ -61,6 +61,9 @@ section.galerie-section ul.galerie-grid li.galerie-item img {
   align-items: center;
   background: rgba(0, 0, 0, 0.747);
 }
+#lightbox i {
+  z-index: 1001;
+}
 
 #lightbox-img {
   max-height: 100vh;

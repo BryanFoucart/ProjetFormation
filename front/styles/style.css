@@ -135,23 +135,12 @@ table {
 @font-face {
   font-family: "Bruno Ace SC";
   src: url("/assets/font/Bruno_Ace_SC/Bruno_Ace_SC.eot");
-  src: url("/assets/font/Bruno_Ace_SC/Bruno_Ace_SC.eot?#iefix")
-      format("embedded-opentype"),
-    url("/assets/font/Bruno_Ace_SC/Bruno_Ace_SC.woff2") format("woff2"),
-    url("/assets/font/Bruno_Ace_SC/Bruno_Ace_SC.woff") format("woff"),
-    url("/assets/font/Bruno_Ace_SC/Bruno_Ace_SC.ttf") format("truetype"),
-    url("/assets/font/Bruno_Ace_SC/Bruno_Ace_SC.svg#Bruno Ace SC") format("svg");
+  src: url("/assets/font/Bruno_Ace_SC/Bruno_Ace_SC.eot?#iefix") format("embedded-opentype"), url("/assets/font/Bruno_Ace_SC/Bruno_Ace_SC.woff2") format("woff2"), url("/assets/font/Bruno_Ace_SC/Bruno_Ace_SC.woff") format("woff"), url("/assets/font/Bruno_Ace_SC/Bruno_Ace_SC.ttf") format("truetype"), url("/assets/font/Bruno_Ace_SC/Bruno_Ace_SC.svg#Bruno Ace SC") format("svg");
 }
 @font-face {
   font-family: "Quintessential";
   src: url("/assets/font/Quintessential/Quintessential.eot");
-  src: url("/assets/font/Quintessential/Quintessential.eot?#iefix")
-      format("embedded-opentype"),
-    url("/assets/font/Quintessential/Quintessential.woff2") format("woff2"),
-    url("/assets/font/Quintessential/Quintessential.woff") format("woff"),
-    url("/assets/font/Quintessential/Quintessential.ttf") format("truetype"),
-    url("/assets/font/Quintessential/Quintessential.svg#Quintessential")
-      format("svg");
+  src: url("/assets/font/Quintessential/Quintessential.eot?#iefix") format("embedded-opentype"), url("/assets/font/Quintessential/Quintessential.woff2") format("woff2"), url("/assets/font/Quintessential/Quintessential.woff") format("woff"), url("/assets/font/Quintessential/Quintessential.ttf") format("truetype"), url("/assets/font/Quintessential/Quintessential.svg#Quintessential") format("svg");
 }
 * {
   scroll-behavior: smooth;
@@ -178,37 +167,37 @@ h3 {
   font-family: "Bruno Ace SC";
 }
 
-html[data-theme="light"] {
+html[data-theme=light] {
   background-color: #ececec;
   color: #212121;
 }
-html[data-theme="light"] a {
+html[data-theme=light] a {
   color: #212121;
 }
-html[data-theme="light"] header {
+html[data-theme=light] header {
   background: #ececec;
 }
-html[data-theme="light"] header nav #logo a:hover i {
+html[data-theme=light] header nav #logo a:hover i {
   color: blue;
 }
-html[data-theme="light"] header nav #nav i[data-theme-toggler] {
+html[data-theme=light] header nav #nav i[data-theme-toggler] {
   color: #212121;
 }
 
-html[data-theme="dark"] {
+html[data-theme=dark] {
   background-color: #212121;
   color: #ececec;
 }
-html[data-theme="dark"] a {
+html[data-theme=dark] a {
   color: #ececec;
 }
-html[data-theme="dark"] header {
+html[data-theme=dark] header {
   background: #212121;
 }
-html[data-theme="dark"] header nav #logo a:hover i {
+html[data-theme=dark] header nav #logo a:hover i {
   color: red;
 }
-html[data-theme="dark"] header nav#nav i[data-theme-toggler] {
+html[data-theme=dark] header nav#nav i[data-theme-toggler] {
   color: #ececec;
 }
 
@@ -234,8 +223,10 @@ a:not(#logo a, #reseaux a, #reseaux-mobile a):after {
   left: 0;
 }
 
-a:not(#logo a, #reseaux a, #reseaux-mobile a):hover:after {
+a:not(#logo a, #reseaux a, #reseaux-mobile a):hover:after,
+a.active:not(#logo a):not(#reseaux-mobile a):not(#reseaux a):after {
   transform: scaleX(1);
+  bottom: -2px;
 }
 
 button {
@@ -277,8 +268,7 @@ main {
 }
 main section#hero-header {
   color: #212121;
-  background: url("/images/Background_with_octogone_.png") no-repeat center
-    center/cover;
+  background: url("/images/Background_with_octogone_.png") no-repeat center center/cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -286,7 +276,7 @@ main section#hero-header {
 }
 main section#hero-header h1 {
   -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
   background-color: rgba(170, 170, 19, 0.5);
   width: 80%;
   padding: 8px 0;
@@ -297,7 +287,7 @@ main section#hero-header h1 {
 main section#hero-header #content {
   padding-bottom: 8px;
   -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
   background-color: rgba(170, 170, 19, 0.5);
   display: flex;
   width: 80%;
@@ -339,34 +329,34 @@ main section:nth-child(1) {
   }
 }
 @media only screen and (max-width: 768px) {
-  html[data-theme="light"] header nav #nav {
+  html[data-theme=light] header nav #nav {
     background-color: #212121;
   }
-  html[data-theme="light"] header nav #nav ul li {
+  html[data-theme=light] header nav #nav ul li {
     color: #ececec;
   }
-  html[data-theme="light"] header nav #nav ul li a {
+  html[data-theme=light] header nav #nav ul li a {
     color: #ececec;
   }
-  html[data-theme="light"] header nav #nav ul li a:hover {
+  html[data-theme=light] header nav #nav ul li a:hover {
     font-size: larger;
   }
-  html[data-theme="light"] header nav #nav i[data-theme-toggler] {
+  html[data-theme=light] header nav #nav i[data-theme-toggler] {
     color: #ececec;
   }
-  html[data-theme="dark"] header nav #nav {
+  html[data-theme=dark] header nav #nav {
     background-color: #ececec;
   }
-  html[data-theme="dark"] header nav #nav ul li {
+  html[data-theme=dark] header nav #nav ul li {
     color: #212121;
   }
-  html[data-theme="dark"] header nav #nav ul li a {
+  html[data-theme=dark] header nav #nav ul li a {
     color: #212121;
   }
-  html[data-theme="dark"] header nav #nav ul li a:hover {
+  html[data-theme=dark] header nav #nav ul li a:hover {
     font-size: larger;
   }
-  html[data-theme="dark"] header nav #nav i[data-theme-toggler] {
+  html[data-theme=dark] header nav #nav i[data-theme-toggler] {
     color: #212121;
   }
 }
@@ -376,7 +366,7 @@ main section:nth-child(1) {
   flex-direction: column;
   padding: 8px;
   -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
   background-color: rgba(255, 255, 255, 0.452);
   border-radius: 0 15px 15px 0;
   bottom: 1rem;
@@ -403,7 +393,7 @@ main section:nth-child(1) {
     justify-content: space-around;
     width: 100%;
     -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
     background-color: rgba(255, 255, 255, 0.158);
     bottom: 0;
     gap: 5px;
@@ -503,4 +493,4 @@ header nav #nav ul li i {
   header nav #nav {
     display: flex;
   }
-} /*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
